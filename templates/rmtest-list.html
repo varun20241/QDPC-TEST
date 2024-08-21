@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <meta name="description" content="POS - Bootstrap Admin Template">
+		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
+        <meta name="author" content="Dreamguys - Bootstrap Admin Template">
+        <meta name="robots" content="noindex, nofollow">
+        <title>Dreams Pos admin template</title>
+		{% load static %}
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png' %}">
+		
+		<!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+		
+		<!-- animation CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+
+		<!-- Select2 CSS -->
+		<link rel="stylesheet" href="{% static 'assets/plugins/select2/css/select2.min.css' %}">
+
+		<!-- Datatable CSS -->
+		<link rel="stylesheet" href="{% static 'assets/css/dataTables.bootstrap4.min.css' %}">
+		
+        <!-- Fontawesome CSS -->
+		<link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/fontawesome.min.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/all.min.css' %}">
+		
+		<!-- Main CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/style2.css' %}">
+		
+		
+    </head>
+    <body>
+		<div id="global-loader" >
+			<div class="whirly-loader"> </div>
+		</div>
+		<!-- Main Wrapper -->
+        <div class="main-wrapper">
+			
+			<!-- Header -->
+			<div class="header">
+			
+				  <!-- Logo -->
+                  <div class="header-left active">
+					<a href="index.html" class="logo logo-normal">
+						<img src="{% static 'assets/img/esth.png' %}"  alt="">
+					</a>
+					<a href="index.html" class="logo logo-white">
+						<img src="{% static 'assets/img/logo-white.png' %}"  alt="">
+					</a>
+					<a href="index.html" class="logo-small">
+						<img src="{% static 'assets/img/logo-small.png' %}"  alt="">
+					</a>
+					<a id="toggle_btn" href="javascript:void(0);">
+						<i data-feather="chevrons-left" class="feather-16"></i>
+					</a>
+                </div>
+                <!-- /Logo -->
+				
+				<a id="mobile_btn" class="mobile_btn" href="#sidebar">
+					<span class="bar-icon">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+				</a>
+				
+				<!-- Header Menu -->
+				<ul class="nav user-menu">
+				
+					<!-- Search -->
+					<li class="nav-item nav-searchinputs">
+						<div class="top-nav-search">
+							
+							<a href="javascript:void(0);" class="responsive-search">
+								<i class="fa fa-search"></i>
+							</a>
+							<form action="#">
+								<div class="searchinputs">
+									<input type="text" placeholder="Search">
+									<div class="search-addon">
+										<span><i data-feather="search" class="feather-14"></i></span>
+									</div>
+								</div>
+								<!-- <a class="btn"  id="searchdiv"><img src="assets/img/icons/search.svg" alt="img"></a> -->
+							</form>
+						</div>
+					</li>
+					<!-- /Search -->
+				
+					<!-- Flag -->
+					<li class="nav-item dropdown has-arrow flag-nav nav-item-box">
+						<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);" role="button">
+							<i data-feather="globe"></i>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<img src="{% static 'assets/img/flags/us.png' %}" alt="" height="16"> English
+						</a>
+						<a href="javascript:void(0);" class="dropdown-item">
+							<img src="{% static 'assets/img/flags/fr.png' %}" alt="" height="16"> French
+						</a>
+						<a href="javascript:void(0);" class="dropdown-item">
+							<img src="{% static 'assets/img/flags/es.png' %}" alt="" height="16"> Spanish
+						</a>
+						<a href="javascript:void(0);" class="dropdown-item">
+							<img src="{% static 'assets/img/flags/de.png' %}" alt="" height="16"> German
+						</a>
+						</div>
+					</li>
+					<!-- /Flag -->
+
+					<li class="nav-item nav-item-box">
+						<a href="javascript:void(0);" id="btnFullscreen">
+							<i data-feather="maximize"></i>
+						</a>
+					</li>
+					<li class="nav-item nav-item-box">
+						<a href="email.html">
+							<i data-feather="mail"></i>
+							<span class="badge rounded-pill">1</span>
+						</a>
+					</li>
+					<!-- Notifications -->
+					<li class="nav-item dropdown nav-item-box">
+						<a href="javascript:void(0);" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+							<i data-feather="bell"></i><span class="badge rounded-pill">2</span>
+						</a>
+						<div class="dropdown-menu notifications">
+							<div class="topnav-dropdown-header">
+								<span class="notification-title">Notifications</span>
+								<a href="javascript:void(0)" class="clear-noti"> Clear All </a>
+							</div>
+							<div class="noti-content">
+								<ul class="notification-list">
+									<li class="notification-message">
+										<a href="activities.html">
+											<div class="media d-flex">
+												<span class="avatar flex-shrink-0">
+													<img alt="" src="{% static 'assets/img/profiles/avatar-02.jpg' %}">
+												</span>
+												<div class="media-body flex-grow-1">
+													<p class="noti-details"><span class="noti-title">John Doe</span> added new task <span class="noti-title">Patient appointment booking</span></p>
+													<p class="noti-time"><span class="notification-time">4 mins ago</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="notification-message">
+										<a href="activities.html">
+											<div class="media d-flex">
+												<span class="avatar flex-shrink-0">
+													<img alt="" src="{% static 'assets/img/profiles/avatar-03.jpg' %}">
+												</span>
+												<div class="media-body flex-grow-1">
+													<p class="noti-details"><span class="noti-title">Tarah Shropshire</span> changed the task name <span class="noti-title">Appointment booking with payment gateway</span></p>
+													<p class="noti-time"><span class="notification-time">6 mins ago</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="notification-message">
+										<a href="activities.html">
+											<div class="media d-flex">
+												<span class="avatar flex-shrink-0">
+													<img alt="" src="{% static 'assets/img/profiles/avatar-06.jpg' %}">
+												</span>
+												<div class="media-body flex-grow-1">
+													<p class="noti-details"><span class="noti-title">Misty Tison</span> added <span class="noti-title">Domenic Houston</span> and <span class="noti-title">Claire Mapes</span> to project <span class="noti-title">Doctor available module</span></p>
+													<p class="noti-time"><span class="notification-time">8 mins ago</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="notification-message">
+										<a href="activities.html">
+											<div class="media d-flex">
+												<span class="avatar flex-shrink-0">
+													<img alt="" src="{% static 'assets/img/profiles/avatar-17.jpg' %}">
+												</span>
+												<div class="media-body flex-grow-1">
+													<p class="noti-details"><span class="noti-title">Rolland Webber</span> completed task <span class="noti-title">Patient and Doctor video conferencing</span></p>
+													<p class="noti-time"><span class="notification-time">12 mins ago</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="notification-message">
+										<a href="activities.html">
+											<div class="media d-flex">
+												<span class="avatar flex-shrink-0">
+													<img alt="" src="{% static 'assets/img/profiles/avatar-13.jpg' %}">
+												</span>
+												<div class="media-body flex-grow-1">
+													<p class="noti-details"><span class="noti-title">Bernardo Galaviz</span> added new task <span class="noti-title">Private chat module</span></p>
+													<p class="noti-time"><span class="notification-time">2 days ago</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="topnav-dropdown-footer">
+								<a href="activities.html">View all Notifications</a>
+							</div>
+						</div>
+					</li>
+					<!-- /Notifications -->
+					
+					<li class="nav-item nav-item-box">
+						<a href="generalsettings.html"><i data-feather="settings"></i></a>
+					</li>
+					<li class="nav-item dropdown has-arrow main-drop">
+						<a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
+							<span class="user-info">
+								<span class="user-letter">
+									<img src="{% static 'assets/img/profiles/avator1.jpg' %}" alt="" class="img-fluid">
+								</span>
+								<span class="user-detail">
+									<span class="user-name">John Smilga</span>
+									<span class="user-role">Super Admin</span>
+								</span>
+							</span>
+						</a>
+						<div class="dropdown-menu menu-drop-user">
+							<div class="profilename">
+								<div class="profileset">
+									<span class="user-img"><img src="{% static 'assets/img/profiles/avator1.jpg' %}" alt="">
+									<span class="status online"></span></span>
+									<div class="profilesets">
+										<h6>John Smilga</h6>
+										<h5>Super Admin</h5>
+									</div>
+								</div>
+								<hr class="m-0">
+								<a class="dropdown-item" href="profile.html"> <i class="me-2"  data-feather="user"></i> My Profile</a>
+								<a class="dropdown-item" href="generalsettings.html"><i class="me-2" data-feather="settings"></i>Settings</a>
+								<hr class="m-0">
+								<a class="dropdown-item logout pb-0" href="signin.html"><img src="{% static 'assets/img/icons/log-out.svg' %}" class="me-2" alt="img">Logout</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- /Header Menu -->
+				
+				<!-- Mobile Menu -->
+				<div class="dropdown mobile-user-menu">
+					<a href="javascript:void(0);" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a class="dropdown-item" href="profile.html">My Profile</a>
+						<a class="dropdown-item" href="generalsettings.html">Settings</a>
+						<a class="dropdown-item" href="signin.html">Logout</a>
+					</div>
+				</div>
+				<!-- /Mobile Menu -->
+			</div>
+			<!-- Header -->
+			
+			 <!-- Sidebar -->
+             <div class="sidebar" id="sidebar">
+                <div class="sidebar-inner slimscroll">
+                    <div id="sidebar-menu" class="sidebar-menu">
+                        <ul>
+                            
+                            <li class="submenu-open">
+                                <h6 class="submenu-hdr">User Management</h6>
+                                <ul>
+                                    <li>
+                                        <a href="dashboard.html" ><i data-feather="grid"></i><span>Dashboard</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="usernew.html" ><i data-feather="grid"></i><span>UserList</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="product.html" ><i data-feather="grid"></i><span>Product</span></a>
+                                    </li>
+									<li>
+										<a href="{% url 'raw-material' %}" ><i data-feather="grid"></i><span>Raw Material</span></a>
+									</li>
+									<li>
+                                        <a href="{% url 'raw-material-acceptance-list' %}" ><i data-feather="grid"></i><span>RM-Acceptance Test</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'raw-material-batch-fetch' %}" ><i data-feather="grid"></i><span>Rawmaterial batch</span></a>
+                                    </li>
+                                   
+                                </ul>								
+                            </li>
+                            
+                            
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /Sidebar -->
+			
+			<div class="page-wrapper">
+				<div class="content">
+					<div class="page-header">
+						<div class="page-title">
+							<h4>Acceptance Test Result</h4>
+							<!-- <h6>Manage your products</h6> -->
+						</div>
+						<div class="page-btn">
+							<a href="{% url 'raw-material-acceptance-add' %}" class="btn btn-added"><img src="{% static 'assets/img/icons/plus.svg' %}" alt="img" class="me-1">Add RM Test Result</a>
+						</div>
+					</div>
+					
+
+					<!-- /product list -->
+					<div class="card">
+						<div class="card-body">
+							<div class="table-top">
+								<div class="search-set">
+									<div class="search-path">
+										<a class="btn btn-filter" id="filter_search">
+											<img src="{% static 'assets/img/icons/filter.svg' %}" alt="img">
+											<span><img src="{% static 'assets/img/icons/closes.svg' %}" alt="img"></span>
+										</a>
+									</div>
+									<div class="search-input">
+										<a class="btn btn-searchset"><img src="{% static 'assets/img/icons/search-white.svg' %}" alt="img"></a>
+									</div>
+								</div>
+								<div class="wordset">
+									<ul>
+										<li>
+											<a data-bs-toggle="tooltip" data-bs-placement="top" title="pdf"><img src="{% static 'assets/img/icons/pdf.svg' %}" alt="img"></a>
+										</li>
+										<li>
+											<a data-bs-toggle="tooltip" data-bs-placement="top" title="excel"><img src="{% static 'assets/img/icons/excel.svg' %}" alt="img"></a>
+										</li>
+										<li>
+											<a data-bs-toggle="tooltip" data-bs-placement="top" title="print"><img src="{% static 'assets/img/icons/printer.svg' %}" alt="img"></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- /Filter -->
+							<div class="card mb-0" id="filter_inputs">
+								<div class="card-body pb-0">
+									<div class="row">
+										<div class="col-lg-12 col-sm-12">
+											<div class="row">
+												<div class="col-lg col-sm-6 col-12">
+													<div class="form-group">
+														<select class="select">
+															<option>Choose Product</option>
+															<option>Macbook pro</option>
+															<option>Orange</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-lg col-sm-6 col-12">
+													<div class="form-group">
+														<select class="select">
+															<option>Choose Category</option>
+															<option>Computers</option>
+															<option>Fruits</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-lg col-sm-6 col-12">
+													<div class="form-group">
+														<select class="select">
+															<option>Choose Sub Category</option>
+															<option>Computer</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-lg col-sm-6 col-12">
+													<div class="form-group">
+														<select class="select">
+															<option>Brand</option>
+															<option>N/D</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-lg col-sm-6 col-12 ">
+													<div class="form-group">
+														<select class="select">
+															<option>Price</option>
+															<option>150.00</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-lg-1 col-sm-6 col-12">
+													<div class="form-group">
+														<a class="btn btn-filters ms-auto"><img src="{% static 'assets/img/icons/search-whites.svg' %}" alt="img"></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Filter -->
+							<div class="table-responsive">
+								<table class="table  datanew">
+									<thead>
+										<tr>
+											
+											<th>Rawmaterial</th>
+											<th>Acceptance Test Name</th>
+											<th>Specification</th>
+											<th>Test Value</th>
+											<th>Sampling Plan</th>
+											<th>Reevaluation Frequency </th>
+											
+											<th>Action</th>	
+										</tr>
+									</thead>
+									<tbody>
+										
+										{% for test in acceptance_tests %}
+										<tr>
+									
+											<td>{{ test.raw_material_name }}</td>
+											<td>{{ test.name }}</td>
+											<td>{{ test.specification|default:"N/D" }}</td>
+											<td>{{ test.value|default:"N/D" }}</td>
+											<td>{{ test.sampling_plan_filename|default:"front page mosaic.pdf"}}</td>
+											<td>{{ test.reevaluation_frequency_value }} {{ test.reevaluation_frequency_unit }}</td>
+											
+											<td>
+												<a class="me-3" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#materialpage">
+													<img src="{% static 'assets/img/icons/eye.svg' %}" alt="img">
+												</a>
+											</td>
+										</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- /product list -->
+				</div>
+			</div>
+        </div>
+		<!-- /Main Wrapper -->
+
+        <div class="modal fade" id="materialpage" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Acceptance Test </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container mt-5">
+                           
+                            <!-- <form>
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">User Name</label>
+                                    <input type="text" class="form-control" id="username" placeholder="Enter User Name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input type="text" class="form-control" id="phone" placeholder="Enter Phone">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="role" class="form-label">Role</label>
+                                    <select class="form-select" id="role">
+                                        <option>Select Role</option>
+                                        <option>Admin</option>
+                                        <option>User</option>
+                                        <option>Guest</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="createdOn" class="form-label">Created On</label>
+                                    <input type="date" class="form-control" id="createdOn">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="status" class="form-label">Status</label>
+                                    <select class="form-select" id="status">
+                                        <option>Select Status</option>
+                                        <option>Active</option>
+                                        <option>Inactive</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </form> -->
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Rawmaterial Batch</label>
+                                <div id="username" class="form-control">Additive (Anti-foaming Agent)</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Acceptance Test</label>
+                                <div id="phone" class="form-control">Viscosity</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Specification</label>
+                                <div id="email" class="form-control">Test specification</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="role" class="form-label">Test Value</label>
+                                <div id="role" class="form-control">ΔE = 0.5</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="createdOn" class="form-label">Unit</label>
+                                <div id="createdOn" class="form-control">kg</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="status" class="form-label">Sampling Plan</label>
+                                <div id="status" class="form-control">front page mosaic.pdf</div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+                  
+
+		 
+		<!-- jQuery -->
+		<script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+
+		<!-- Feather Icon JS -->
+		<script src="{% static 'assets/js/feather.min.js' %}"></script>
+
+		<!-- Slimscroll JS -->
+		<script src="{% static 'assets/js/jquery.slimscroll.min.js' %}"></script>
+
+		<!-- Datatable JS -->
+		<script src="{% static 'assets/js/jquery.dataTables.min.js' %}"></script>
+		<script src="{% static 'assets/js/dataTables.bootstrap4.min.js' %}"></script>
+		
+		<!-- Bootstrap Core JS -->
+		<script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+
+		<!-- Select2 JS -->
+		<script src="{% static 'assets/plugins/select2/js/select2.min.js' %}"></script>
+
+		<!-- Sweetalert 2 -->
+		<script src="{% static 'assets/plugins/sweetalert/sweetalert2.all.min.js' %}"></script>
+		<script src="{% static 'assets/plugins/sweetalert/sweetalerts.min.js' %}"></script>
+
+		<!-- Custom JS -->
+		<script src="{% static 'assets/js/script.js' %}"></script>
+    </body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <meta name="description" content="POS - Bootstrap Admin Template">
+        <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern,  html5, responsive">
+        <meta name="author" content="Dreamguys - Bootstrap Admin Template">
+        <meta name="robots" content="noindex, nofollow">
+        <title>Dreams Pos admin template</title>
+        
+        <!-- Favicon -->
+        {% load static %}
+        <!-- Favicon -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png' %}">
+        
+    
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png' %}">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+        
+        <!-- animation CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+
+        <!-- Datatable CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/dataTables.bootstrap4.min.css' %}">
+
+            <!-- Include jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Include SweetAlert2 JS -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
+        <!-- Fontawesome CSS -->
+        <link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/fontawesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/all.min.css' %}">
+        
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/style2.css' %}">
+        
+    </head>
+    <body>
+        <div id="global-loader" >
+            <div class="whirly-loader"> </div>
+        </div>
+        <!-- Main Wrapper -->
+        <div class="main-wrapper">
+
+            <!-- Header -->
+        <div class="header">
+        
+            <!-- Logo -->
+             <div class="header-left active">
+                <a href="index.html" class="logo logo-normal">
+                    <img src="{% static 'assets/img/esth.png' %}"  alt="">
+                </a>
+                <a href="index.html" class="logo logo-white">
+                    <img src="{% static 'assets/img/logo-white.png' %}"  alt="">
+                </a>
+                <a href="index.html" class="logo-small">
+                    <img src="{% static 'assets/img/logo-small.png' %}"  alt="">
+                </a>
+                <a id="toggle_btn" href="javascript:void(0);">
+                    <i data-feather="chevrons-left" class="feather-16"></i>
+                </a>
+            </div>
+            <!-- /Logo -->
+            
+            <a id="mobile_btn" class="mobile_btn" href="#sidebar">
+                <span class="bar-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </a>
+            
+            <!-- Header Menu -->
+            <ul class="nav user-menu">
+            
+                <!-- Search -->
+                <li class="nav-item nav-searchinputs">
+                    <div class="top-nav-search">
+                        
+                        <a href="javascript:void(0);" class="responsive-search">
+                            <i class="fa fa-search"></i>
+                        </a>
+                        <form action="#">
+                            <div class="searchinputs">
+                                <input type="text" placeholder="Search">
+                                <div class="search-addon">
+                                    <span><i data-feather="search" class="feather-14"></i></span>
+                                </div>
+                            </div>
+                            <!-- <a class="btn"  id="searchdiv"><img src="assets/img/icons/search.svg" alt="img"></a> -->
+                        </form>
+                    </div>
+                </li>
+                <!-- /Search -->
+            
+                <!-- Flag -->
+                <li class="nav-item dropdown has-arrow flag-nav nav-item-box">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);" role="button">
+                        <i data-feather="globe"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="javascript:void(0);" class="dropdown-item active">
+                            <img src="{% static 'assets/img/flags/us.png' %}" alt="" height="16"> English
+                        </a>
+                        <a href="javascript:void(0);" class="dropdown-item">
+                            <img src="{% static 'assets/img/flags/fr.png' %}" alt="" height="16"> French
+                        </a>
+                        <a href="javascript:void(0);" class="dropdown-item">
+                            <img src="{% static 'assets/img/flags/es.png' %}" alt="" height="16"> Spanish
+                        </a>
+                        <a href="javascript:void(0);" class="dropdown-item">
+                            <img src="{% static 'assets/img/flags/de.png' %}" alt="" height="16"> German
+                        </a>
+                    </div>
+                </li>
+                <!-- /Flag -->
+
+                <li class="nav-item nav-item-box">
+                    <a href="javascript:void(0);" id="btnFullscreen">
+                        <i data-feather="maximize"></i>
+                    </a>
+                </li>
+                <li class="nav-item nav-item-box">
+                    <a href="email.html">
+                        <i data-feather="mail"></i>
+                        <span class="badge rounded-pill">1</span>
+                    </a>
+                </li>
+                <!-- Notifications -->
+                <li class="nav-item dropdown nav-item-box">
+                    <a href="javascript:void(0);" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+                        <i data-feather="bell"></i><span class="badge rounded-pill">2</span>
+                    </a>
+                    <div class="dropdown-menu notifications">
+                        <div class="topnav-dropdown-header">
+                            <span class="notification-title">Notifications</span>
+                            <a href="javascript:void(0)" class="clear-noti"> Clear All </a>
+                        </div>
+                        <div class="noti-content">
+                            <ul class="notification-list">
+                                <li class="notification-message">
+                                    <a href="activities.html">
+                                        <div class="media d-flex">
+                                            <span class="avatar flex-shrink-0">
+                                                <img alt="" src="{% static 'assets/img/profiles/avatar-02.jpg' %}">
+                                            </span>
+                                            <div class="media-body flex-grow-1">
+                                                <p class="noti-details"><span class="noti-title">John Doe</span> added new task <span class="noti-title">Patient appointment booking</span></p>
+                                                <p class="noti-time"><span class="notification-time">4 mins ago</span></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="notification-message">
+                                    <a href="activities.html">
+                                        <div class="media d-flex">
+                                            <span class="avatar flex-shrink-0">
+                                                <img alt="" src="{% static 'assets/img/profiles/avatar-03.jpg' %}">
+                                            </span>
+                                            <div class="media-body flex-grow-1">
+                                                <p class="noti-details"><span class="noti-title">Tarah Shropshire</span> changed the task name <span class="noti-title">Appointment booking with payment gateway</span></p>
+                                                <p class="noti-time"><span class="notification-time">6 mins ago</span></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="notification-message">
+                                    <a href="activities.html">
+                                        <div class="media d-flex">
+                                            <span class="avatar flex-shrink-0">
+                                                <img alt="" src="{% static 'assets/img/profiles/avatar-06.jpg' %}">
+                                            </span>
+
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            <tbody>
+                                                                {% for user in users %}
+                                                                    {% if not user.is_active %}
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label class="checkboxs">
+                                                                                <input type="checkbox">
+                                                                                <span class="checkmarks"></span>
+                                                                            </label>
+                                                                        </td>
+                                                                        <td>{{ user.username }}</td>
+                                                                        <td>{{ user.usertype }}</td>
+                                                                        <td>
+                                                                            {% for cet in user.centre.all %}
+                                                                                {{ cet.name }}{% if not forloop.last %}, {% endif %}
+                                                                            {% endfor %}
+                                                                        </td>
+                                                                        <td>
+                                                                            {% for div in user.divisions.all %}
+                                                                                {{ div.name }}{% if not forloop.last %}, {% endif %}
+                                                                            {% endfor %}
+                                                                        </td>
+                                                                        <td>
+                                                                            {% for role in user.role.all %}
+                                                                                {{ role.name }}{% if not forloop.last %}, {% endif %}
+                                                                            {% endfor %}
+                                                                        </td>
+                                                                        <td>{{ user.date_joined }}</td>
+                                                                        <td><span class="bg-lightred badges">Inactive</span></td>
+                                                                        <td>
+                                                                            <button type="button" class="bg-secondary badges"  data-user-id="{{ user.id }}" id="approve_butn">Approve</button>
+                                                                            <a class="me-3 confirm-text" href="javascript:void(0);">
+                                                                                <span class="bg-lightred badges">Reject</span>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+                        <!-- /Tabs -->
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- /Main Wrapper -->
+          
+        <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+
+        <!-- Feather Icon JS -->
+        <script src="{% static 'assets/js/feather.min.js' %}"></script>
+
+        <!-- Slimscroll JS -->
+        <script src="{% static 'assets/js/jquery.slimscroll.min.js' %}"></script>
+
+        <!-- Datatable JS -->
+        <script src="{% static 'assets/js/jquery.dataTables.min.js' %}"></script>
+        <script src="{% static 'assets/js/dataTables.bootstrap4.min.js' %}"></script>
+        
+        <!-- Bootstrap Core JS -->
+        <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+
+        <!-- Chart JS -->
+        <script src="{% static 'assets/plugins/apexchart/apexcharts.min.js' %}"></script>
+        <script src="{% static 'assets/plugins/apexchart/chart-data.js' %}"></script>
+        
+        <!-- Custom JS -->
+        <script src="{% static 'assets/js/script.js' %}"></script>
+        
+    </body>
+
+    <script>
+
+
+$(document).ready(function() {
+    // Hardcode the base URL
+    const baseUrl = '/user/approve-user/'; // Adjust this to your actual URL pattern
+
+    $(document).on("click", "#approve_butn", function () {
+        const userId = $(this).data('user-id');
+        const url = `${baseUrl}${userId}/`; // Append user ID to the base URL
+
+        // Log URL for debugging
+        console.log("Request URL:", url);
+
+        Swal.fire({
+            title: "Do you want to approve this user?",
+            showCancelButton: true,
+            confirmButtonText: "Approve",
+            
+           
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Call the API to approve the user
+                fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': '{{ csrf_token }}' // Ensure CSRF token is included
+                    },
+                    // No need to include the body if your endpoint only needs the URL parameter
+                })
+                .then(response => response.json())
+                .then(data => {
+                 
+                    if (data.isSuccess) {
+                        Swal.fire("User Approved Successfully", "", "success");
+                        // Optionally, refresh the page or update the UI here
+                        location.reload(); // Refresh the page after successful approval
+                    } else {
+                        Swal.fire("Approval Failed", data.error || "An error occurred", "error");
+                    }
+                })
+                .catch(error => {
+                    Swal.fire({
+                                    title: "User Approved Successfully",
+                                    icon: "success",
+                                    timer: 3000, // Show for 3 seconds
+                                    showConfirmButton: false
+                                }).then(() => {
+                                    setTimeout(() => {
+                                        window.location.reload(); // Reload the page after 3 seconds
+                                    }, 1000); // 3 seconds delay
+                                });
+                });
+            }
+        });
+    });
+
+
+
+
+});
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+    
+        // Get all checkboxes
+        const checkboxes = document.querySelectorAll('.status-toggle .check');
+        const updateUserStatusUrl = '{% url "update_user_status" %}';
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const isChecked = this.checked;
+                const username = this.id.split('_')[1]; // Extract username from checkbox id
+                const id = this.getAttribute('data-user-id'); 
+              
+                // Prepare data to send
+                const data = {
+                    'username': username,
+                    'is_active': isChecked,
+                    'id': id, 
+                };
+
+                // Send AJAX request to update user status
+                fetch(updateUserStatusUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': '{{ csrf_token }}' // Include CSRF token for Django
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.reload();
+                    } else {
+                        console.error('Failed to update user status.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+        });
+    });
+
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('log-out').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default anchor behavior
+                // Use the Django URL template tag to get the URL for login_view
+                window.location.href = '{% url "login_view" %}';
+            });
+        });
+        
+    </script>
+</html>

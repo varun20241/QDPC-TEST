@@ -63,12 +63,11 @@ class User(AbstractBaseUser, PermissionsMixin):
     phone_number = models.CharField(max_length=20, validators=[phone_regex], blank=True)
     date_joined = models.DateField(auto_now_add=True)  # Join date (automatically set)
     is_active = models.BooleanField(default=True)  # Active user status
-
     # Custom fields
     role_id = models.CharField(max_length=255, null=True, blank=True)  # Role ID (consider using a separate model for roles)
     usertype = models.ForeignKey(UserType, on_delete=models.CASCADE, blank=True, null=True)
-    is_active = models.BooleanField(default=True)
-    is_staff = models.BooleanField(default=False)
+    is_staff = models.BooleanField(default=True)
+    is_approved = models.BooleanField(default=True) 
     role = models.ManyToManyField(Role, related_name="test_group", verbose_name="Roles", help_text='Hold down "Control", or "Command" on a Mac, to select more than one.')
 
     USERNAME_FIELD = 'username'
